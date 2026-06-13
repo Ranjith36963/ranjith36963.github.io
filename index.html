@@ -337,13 +337,23 @@
         .tl { position: relative; padding: 0 0 40px 36px; border-left: 1px solid var(--border); }
         .tl:last-child { border-left-color: transparent; padding-bottom: 0; }
         .tl-dot { position: absolute; left: -7px; top: 5px; width: 13px; height: 13px; border-radius: 50%; background: var(--grad); border: 2px solid var(--bg); }
-        .tl-meta { font-family: 'JetBrains Mono'; font-size: 0.77rem; color: var(--cyan); margin-bottom: 6px; }
+        .tl-meta { font-family: 'JetBrains Mono'; font-size: 0.77rem; color: var(--text-3); margin-bottom: 6px; }
         .tl-title { font-family: 'Space Grotesk'; font-size: 1.24rem; font-weight: 600; letter-spacing: -0.01em; }
         .tl-org { color: var(--text-2); font-size: 0.96rem; margin-bottom: 14px; } .tl-org b { color: var(--text); font-weight: 600; }
         .tl-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
         .tl-list li { position: relative; padding-left: 20px; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; }
         .tl-list li::before { content: "▹"; position: absolute; left: 0; color: var(--violet); }
         .tl-list li b { color: var(--text); font-weight: 600; }
+        .tl-dot.work { background: var(--cyan); }
+        .tl-dot.edu { background: var(--violet); }
+        .tl-tag { display: inline-block; font-family: 'JetBrains Mono'; font-size: 0.65rem; letter-spacing: 0.09em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); margin-bottom: 11px; }
+        .tl-tag.work { color: var(--cyan); background: color-mix(in srgb, var(--cyan) 12%, transparent); }
+        .tl-tag.edu { color: var(--violet); background: color-mix(in srgb, var(--violet) 14%, transparent); }
+        .tl-intro { color: var(--text-2); font-size: 0.97rem; margin: 4px 0 6px; }
+        .tl-intro b { color: var(--text); }
+        .tl-label { font-family: 'JetBrains Mono'; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 16px 0 10px; }
+        .tl-soft { color: var(--text-3); font-size: 0.9rem; }
+        .tl .techs { margin-bottom: 2px; }
 
         .ec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 66px; }
         .block-title { font-family: 'Space Grotesk'; font-size: 1.3rem; font-weight: 600; margin-bottom: 22px; letter-spacing: -0.01em; }
@@ -814,58 +824,93 @@
             </div>
             <div class="timeline">
                 <div class="tl reveal">
-                    <span class="tl-dot"></span>
-                    <div class="tl-meta">JUN 2025 – SEP 2025 · STEVENAGE, UK</div>
-                    <div class="tl-title">AI Solutions Engineer — R&amp;D Department</div>
-                    <div class="tl-org"><b>Calnex Solutions</b></div>
+                    <span class="tl-dot work"></span>
+                    <div class="tl-tag work">Work</div>
+                    <div class="tl-meta">JUN 2025 – SEP 2025 · 4 MOS · STEVENAGE, ENGLAND, UNITED KINGDOM · ON-SITE</div>
+                    <div class="tl-title">AI Solutions Engineer – R&amp;D Department</div>
+                    <div class="tl-org"><b>Calnex Solutions</b> · Contract</div>
+                    <p class="tl-intro">Architected production-ready multimodal Generative AI assistant achieving <b>95% response accuracy</b> with <b>75% faster</b> response times.</p>
+                    <div class="tl-label">Key achievements</div>
                     <ul class="tl-list">
-                        <li>Architected a containerized multimodal AI assistant achieving <b>95% accuracy</b> across text, image, speech and audio inputs</li>
-                        <li>Engineered a production RAG pipeline with <b>AWS Bedrock + Chroma DB</b>, improving relevance by 40% and cutting latency by 35%</li>
-                        <li>Optimized retrieval with <b>Redis caching + AWS S3</b>, dropping response time from 3.2s to 0.8s (75% faster)</li>
-                        <li>Designed a multi-agent workflow for complex queries — <b>92% user satisfaction</b>; accelerated R&amp;D features by 25%</li>
+                        <li>Built containerized multimodal AI system processing <b>text, image, speech, and audio</b> inputs using Docker on Linux VM, enabling portable production deployment across environments</li>
+                        <li>Engineered high-performance <b>RAG (Retrieval-Augmented Generation)</b> pipeline with AWS Bedrock and Chroma DB vector database, improving AI response relevance by 40% and reducing query latency by 35%</li>
+                        <li>Optimized data retrieval architecture implementing <b>Redis caching and AWS S3</b> integration, cutting response time from 3.2 seconds to 0.8 seconds (75% improvement)</li>
+                        <li>Designed and deployed <b>multi-agent workflow architecture</b> for complex query handling, delivering context-aware solutions with 92% user satisfaction score</li>
+                        <li>Collaborated cross-functionally with R&amp;D teams to integrate multimodal AI capabilities into product roadmap, accelerating feature development cycle by 25%</li>
                     </ul>
+                    <div class="tl-label">Technologies</div>
+                    <div class="techs"><span class="tech">Docker</span><span class="tech">AWS Bedrock</span><span class="tech">AWS S3</span><span class="tech">Chroma DB</span><span class="tech">Redis</span><span class="tech">Linux</span><span class="tech">Python</span><span class="tech">RAG Pipelines</span><span class="tech">Generative AI</span><span class="tech">Multi-Agent Systems</span><span class="tech">Vector Databases</span></div>
                 </div>
-                <div class="tl reveal">
-                    <span class="tl-dot"></span>
-                    <div class="tl-meta">OCT 2024 – JAN 2025 · LONDON, UK</div>
-                    <div class="tl-title">AI / ML Engineer Intern</div>
-                    <div class="tl-org"><b>Nethermind</b></div>
-                    <ul class="tl-list">
-                        <li>Designed and built scalable LLM systems with <b>TensorFlow &amp; PyTorch</b> for video understanding and NLP</li>
-                        <li>Iteratively fine-tuned AI responses to improve interaction quality, engagement and context relevance</li>
-                        <li>Integrated and evaluated video models via <b>Gemini and OpenAI APIs</b> across diverse content types</li>
-                        <li>Built robust data preprocessing pipelines and orchestrated workflows with <b>LangChain</b></li>
-                    </ul>
-                </div>
-                <div class="tl reveal">
-                    <span class="tl-dot"></span>
-                    <div class="tl-meta">JAN 2022 – FEB 2024 · UNITED KINGDOM</div>
-                    <div class="tl-title">MSc Artificial Intelligence &amp; Robotics</div>
-                    <div class="tl-org"><b>University of Hertfordshire</b></div>
-                    <ul class="tl-list">
-                        <li>Dissertation: <b>ML Techniques for Online Payment Fraud Detection</b> — 90% accuracy on 6.3M+ transactions</li>
-                        <li>Compared 5 ML algorithms; handled severe class imbalance (0.17% fraud) with SMOTE and SHAP explainability</li>
-                        <li>Coursework: neural networks, deep learning, computer vision, reinforcement learning</li>
-                    </ul>
-                </div>
-                <div class="tl reveal">
-                    <span class="tl-dot"></span>
-                    <div class="tl-meta">AUG 2016 – AUG 2020 · INDIA</div>
-                    <div class="tl-title">BEng Computer Science Engineering</div>
-                    <div class="tl-org"><b>Visvesvaraya Technological University</b></div>
-                    <ul class="tl-list">
-                        <li>Built a traffic management system with ML + IoT sensors and an aircraft-engine predictive-maintenance model</li>
-                        <li>Foundation in algorithms, data structures and ML fundamentals</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="reveal" style="margin-top: 66px;">
-                <h3 class="block-title">Education</h3>
-                <div class="edu-grid">
-                    <div class="card edu"><div class="deg">MSc Artificial Intelligence &amp; Robotics</div><div class="uni">University of Hertfordshire</div><div class="yr">2022 – 2024</div></div>
-                    <div class="card edu"><div class="deg">BEng Computer Science Engineering</div><div class="uni">Visvesvaraya Technological University</div><div class="yr">2016 – 2020</div></div>
-                    <div class="card edu"><div class="deg">Pre-University · Physics, Chemistry, Maths &amp; CS</div><div class="uni">Vijaya College, Bengaluru</div><div class="yr">2014 – 2016</div></div>
+                <div class="tl reveal">
+                    <span class="tl-dot work"></span>
+                    <div class="tl-tag work">Work</div>
+                    <div class="tl-meta">OCT 2024 – JAN 2025 · 4 MOS · LONDON AREA, UNITED KINGDOM · REMOTE</div>
+                    <div class="tl-title">AI / ML Intern</div>
+                    <div class="tl-org"><b>Nethermind</b> · Internship</div>
+                    <p class="tl-intro">Developed scalable LLM systems and multimodal AI solutions for a blockchain technology company, focusing on video understanding and natural language processing applications.</p>
+                    <div class="tl-label">Key achievements</div>
+                    <ul class="tl-list">
+                        <li>Designed and built scalable LLM systems using <b>TensorFlow and PyTorch</b>, enhancing performance through advanced NLP techniques and hyperparameter optimization</li>
+                        <li>Improved user engagement metrics by iteratively fine-tuning AI responses for optimal interaction quality and context relevance</li>
+                        <li>Integrated and assessed video understanding models using <b>Gemini and OpenAI APIs</b>, ensuring high-quality performance across diverse content types</li>
+                        <li>Developed robust data preprocessing pipelines to streamline model training workflows, reducing training time and improving model accuracy</li>
+                        <li>Implemented <b>LangChain</b> framework for orchestrating complex AI workflows and prompt engineering optimization</li>
+                    </ul>
+                    <div class="tl-label">Technologies</div>
+                    <div class="techs"><span class="tech">Python</span><span class="tech">TensorFlow</span><span class="tech">PyTorch</span><span class="tech">LangChain</span><span class="tech">OpenAI API</span><span class="tech">Gemini API</span><span class="tech">Large Language Models</span><span class="tech">NLP</span><span class="tech">Video Understanding</span><span class="tech">Data Preprocessing</span></div>
+                </div>
+
+                <div class="tl reveal">
+                    <span class="tl-dot edu"></span>
+                    <div class="tl-tag edu">Education</div>
+                    <div class="tl-meta">JAN 2022 – FEB 2024 · UNITED KINGDOM</div>
+                    <div class="tl-title">Master's degree, Artificial Intelligence and Robotics</div>
+                    <div class="tl-org"><b>University of Hertfordshire</b></div>
+                    <div class="tl-label">Relevant coursework</div>
+                    <div class="techs"><span class="tech">Neural Networks</span><span class="tech">Machine Learning</span><span class="tech">Deep Learning</span><span class="tech">Computer Vision</span><span class="tech">Reinforcement Learning</span><span class="tech">AI Theory and Practice</span><span class="tech">Artificial Life with Robotics</span></div>
+                    <div class="tl-label">Master's dissertation — Machine Learning Techniques for Online Payment System Fraud Detection</div>
+                    <ul class="tl-list">
+                        <li>Collected and prepared transactional data for machine learning models, performing feature engineering and data preprocessing</li>
+                        <li>Trained, evaluated, and optimized fraud detection models using <b>Random Forest, XGBoost, and Neural Networks</b>, achieving 90% accuracy</li>
+                        <li>Assessed model performance using accuracy, precision, recall, and F1-score metrics to ensure robust fraud detection</li>
+                        <li>Conducted comprehensive testing, error analysis, and model interpretability studies to improve computational efficiency and fraud prevention insights</li>
+                    </ul>
+                    <div class="tl-label">Activities &amp; societies</div>
+                    <p class="tl-soft">AI society · Robotics society · Coding · Volleyball &amp; Badminton</p>
+                </div>
+
+                <div class="tl reveal">
+                    <span class="tl-dot edu"></span>
+                    <div class="tl-tag edu">Education</div>
+                    <div class="tl-meta">AUG 2016 – AUG 2020 · INDIA</div>
+                    <div class="tl-title">Bachelor of Engineering – BE, Computer Science</div>
+                    <div class="tl-org"><b>Visvesvaraya Technological University</b></div>
+                    <div class="tl-label">Relevant coursework</div>
+                    <div class="techs"><span class="tech">Data Structures &amp; Algorithms</span><span class="tech">Operating Systems</span><span class="tech">Computer Networks</span><span class="tech">Database Management</span><span class="tech">AI &amp; Machine Learning</span><span class="tech">Programming Fundamentals</span></div>
+                    <div class="tl-label">Academic project — Traffic Management System using Machine Learning and IoT</div>
+                    <ul class="tl-list">
+                        <li>Developed intelligent traffic prediction and optimization system integrating ML algorithms with IoT sensors for real-time traffic flow analysis</li>
+                    </ul>
+                    <div class="tl-label">Academic internship — Prediction of Remaining Useful Life of Aircraft Engine using ML</div>
+                    <ul class="tl-list">
+                        <li>Built predictive maintenance system using regression models to forecast engine remaining useful life (RUL) and optimize maintenance scheduling</li>
+                    </ul>
+                    <div class="tl-label">Activities &amp; societies</div>
+                    <p class="tl-soft">Marching band · Volleyball · Athletics · Badminton</p>
+                </div>
+
+                <div class="tl reveal">
+                    <span class="tl-dot edu"></span>
+                    <div class="tl-tag edu">Education</div>
+                    <div class="tl-meta">JUN 2014 – JUL 2016 · INDIA</div>
+                    <div class="tl-title">Pre-University — Physics, Chemistry, Mathematics &amp; Computer Science</div>
+                    <div class="tl-org"><b>Vijaya College, Bengaluru</b></div>
+                    <p class="tl-intro">Focused on building a strong foundation in STEM subjects with emphasis on mathematics, physics, and early programming concepts.</p>
+                    <div class="tl-label">Relevant coursework</div>
+                    <div class="techs"><span class="tech">Physics</span><span class="tech">Chemistry</span><span class="tech">Mathematics</span><span class="tech">Computer Science</span></div>
+                    <div class="tl-label">Activities &amp; societies</div>
+                    <p class="tl-soft">Volleyball · Cricket · Programming</p>
                 </div>
             </div>
 
