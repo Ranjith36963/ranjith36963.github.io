@@ -357,14 +357,11 @@
 
         .ec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 66px; }
         .block-title { font-family: 'Space Grotesk'; font-size: 1.3rem; font-weight: 600; margin-bottom: 22px; letter-spacing: -0.01em; }
-        .edu { padding: 20px 22px; margin-bottom: 14px; }
-        .edu .deg { font-weight: 600; font-size: 1rem; } .edu .uni { color: var(--text-2); font-size: 0.9rem; } .edu .yr { font-family: 'JetBrains Mono'; color: var(--text-3); font-size: 0.8rem; margin-top: 4px; }
         .cert { display: flex; align-items: center; gap: 14px; padding: 15px 18px; margin-bottom: 12px; }
         .cert-badge { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-size: 0.95rem; }
         .cert .n { font-weight: 600; font-size: 0.92rem; line-height: 1.35; } .cert .src { color: var(--text-3); font-size: 0.8rem; }
-        .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-        .edu-grid .edu, .cert-grid .cert { margin-bottom: 0; height: 100%; }
+        .cert-grid .cert { margin-bottom: 0; height: 100%; }
         .cert-count { font-family: 'JetBrains Mono'; font-size: 0.92rem; color: var(--text-3); font-weight: 500; }
         .cert-badge img { display: block; }
 
@@ -422,7 +419,7 @@
             .hero-aside { order: -1; max-width: 380px; }
             .about-grid { grid-template-columns: 1fr; gap: 30px; }
             .pcols { grid-template-columns: 1fr; gap: 22px; }
-            .gridc, .skills-grid, .ec-grid, .edu-grid { grid-template-columns: 1fr; }
+            .gridc, .skills-grid, .ec-grid { grid-template-columns: 1fr; }
             .bento, .tools-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 680px) {
