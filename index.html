@@ -352,6 +352,11 @@
         .cert { display: flex; align-items: center; gap: 14px; padding: 15px 18px; margin-bottom: 12px; }
         .cert-badge { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-size: 0.95rem; }
         .cert .n { font-weight: 600; font-size: 0.92rem; line-height: 1.35; } .cert .src { color: var(--text-3); font-size: 0.8rem; }
+        .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+        .edu-grid .edu, .cert-grid .cert { margin-bottom: 0; height: 100%; }
+        .cert-count { font-family: 'JetBrains Mono'; font-size: 0.92rem; color: var(--text-3); font-weight: 500; }
+        .cert-badge img { display: block; }
 
         /* Contact */
         .contact-card { border: 1px solid var(--border-2); border-radius: 30px; padding: 64px 50px; text-align: center; position: relative; overflow: hidden; background: var(--grad-soft); }
@@ -407,7 +412,7 @@
             .hero-aside { order: -1; max-width: 380px; }
             .about-grid { grid-template-columns: 1fr; gap: 30px; }
             .pcols { grid-template-columns: 1fr; gap: 22px; }
-            .gridc, .skills-grid, .ec-grid { grid-template-columns: 1fr; }
+            .gridc, .skills-grid, .ec-grid, .edu-grid { grid-template-columns: 1fr; }
             .bento, .tools-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 680px) {
@@ -855,21 +860,34 @@
                 </div>
             </div>
 
-            <div class="ec-grid">
-                <div class="reveal">
-                    <h3 class="block-title">Education</h3>
+            <div class="reveal" style="margin-top: 66px;">
+                <h3 class="block-title">Education</h3>
+                <div class="edu-grid">
                     <div class="card edu"><div class="deg">MSc Artificial Intelligence &amp; Robotics</div><div class="uni">University of Hertfordshire</div><div class="yr">2022 – 2024</div></div>
                     <div class="card edu"><div class="deg">BEng Computer Science Engineering</div><div class="uni">Visvesvaraya Technological University</div><div class="yr">2016 – 2020</div></div>
                     <div class="card edu"><div class="deg">Pre-University · Physics, Chemistry, Maths &amp; CS</div><div class="uni">Vijaya College, Bengaluru</div><div class="yr">2014 – 2016</div></div>
                 </div>
-                <div class="reveal">
-                    <h3 class="block-title">Certifications</h3>
-                    <div class="card cert"><span class="cert-badge" style="color:#FF9900;font-family:'JetBrains Mono';font-weight:800;font-size:.74rem;"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" width="22" height="22" loading="lazy" onerror="this.outerHTML='aws'"></span><div><div class="n">AWS Certified Cloud Practitioner</div><div class="src">Amazon Web Services (AWS)</div></div></div>
-                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/claude/D97757" alt="Claude" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Building with the Claude API</div><div class="src">Anthropic</div></div></div>
-                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">AI Fluency: Framework &amp; Foundations</div><div class="src">Anthropic</div></div></div>
-                    <div class="card cert"><span class="cert-badge" style="color:#A435F0;font-weight:800;"><img src="https://cdn.simpleicons.org/udemy/A435F0" alt="Udemy" width="22" height="22" loading="lazy" onerror="this.outerHTML='U'"></span><div><div class="n">The Complete Python Bootcamp From Zero to Hero in Python</div><div class="src">Udemy</div></div></div>
-                    <div class="card cert"><span class="cert-badge" style="color:#A100FF;font-weight:800;font-size:1.1rem;"><img src="https://cdn.simpleicons.org/accenture/A100FF" alt="Accenture" width="22" height="22" loading="lazy" onerror="this.outerHTML='&gt;'"></span><div><div class="n">Accenture North America - Data Analytics and Visualization Job Simulation</div><div class="src">Forage</div></div></div>
-                    <div class="card cert"><span class="cert-badge" style="color:#20BEFF;font-weight:800;"><img src="https://cdn.simpleicons.org/kaggle/20BEFF" alt="Kaggle" width="22" height="22" loading="lazy" onerror="this.outerHTML='k'"></span><div><div class="n">Intro to Machine Learning</div><div class="src">Kaggle</div></div></div>
+            </div>
+
+            <div class="reveal" style="margin-top: 48px;">
+                <h3 class="block-title">Certifications <span class="cert-count">· 16 credentials</span></h3>
+                <div class="cert-grid">
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">AI Fluency: Framework &amp; Foundations</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">AI Fluency: AI Capabilities &amp; Limitations</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Claude Code in Action</div><div class="src">Anthropic · Jan 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Claude Code 101</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Introduction to subagents</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Introduction to agent skills</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Model Context Protocol: Advanced Topics</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Introduction to Model Context Protocol</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#D97757;font-weight:800;"><img src="https://cdn.simpleicons.org/anthropic/D97757" alt="Anthropic" width="22" height="22" loading="lazy" onerror="this.outerHTML='A'"></span><div><div class="n">Building with the Claude API</div><div class="src">Anthropic · May 2026</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#FF9900;font-family:'JetBrains Mono';font-weight:800;font-size:.72rem;"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" width="22" height="22" loading="lazy" onerror="this.outerHTML='aws'"></span><div><div class="n">AWS Certified AI Practitioner</div><div class="src">Amazon Web Services · Dec 2025</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#3b82f6;font-weight:800;"><img src="https://cdn.simpleicons.org/forage/3b82f6" alt="Forage" width="22" height="22" loading="lazy" onerror="this.outerHTML='F'"></span><div><div class="n">Cognizant - Artificial Intelligence Job Simulation</div><div class="src">Forage · Apr 2024</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#22d3ee;font-weight:800;font-size:.78rem;"><img src="https://cdn.simpleicons.org/learnprompting/22d3ee" alt="Learn Prompting" width="22" height="22" loading="lazy" onerror="this.outerHTML='LP'"></span><div><div class="n">ChatGPT for Everyone</div><div class="src">Learn Prompting · Mar 2024</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#20BEFF;font-weight:800;"><img src="https://cdn.simpleicons.org/kaggle/20BEFF" alt="Kaggle" width="22" height="22" loading="lazy" onerror="this.outerHTML='k'"></span><div><div class="n">Intro to Machine Learning</div><div class="src">Kaggle · Apr 2024</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#20BEFF;font-weight:800;"><img src="https://cdn.simpleicons.org/kaggle/20BEFF" alt="Kaggle" width="22" height="22" loading="lazy" onerror="this.outerHTML='k'"></span><div><div class="n">Python</div><div class="src">Kaggle · Mar 2024</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#A435F0;font-weight:800;"><img src="https://cdn.simpleicons.org/udemy/A435F0" alt="Udemy" width="22" height="22" loading="lazy" onerror="this.outerHTML='U'"></span><div><div class="n">The Complete Python Bootcamp From Zero to Hero in Python</div><div class="src">Udemy · Mar 2024</div></div></div>
+                    <div class="card cert"><span class="cert-badge" style="color:#3b82f6;font-weight:800;"><img src="https://cdn.simpleicons.org/forage/3b82f6" alt="Forage" width="22" height="22" loading="lazy" onerror="this.outerHTML='F'"></span><div><div class="n">Accenture North America - Data Analytics and Visualization Job Simulation</div><div class="src">Forage · Mar 2024</div></div></div>
                 </div>
             </div>
         </div>
