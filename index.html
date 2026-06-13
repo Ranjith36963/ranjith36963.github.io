@@ -477,7 +477,7 @@
                     </div>
                 </div>
                 <div class="hero-aside reveal">
-                    <div class="portrait-wrap"><img src="images/profile.png" alt="Ranjith Maliga Guruprakash" class="portrait"></div>
+                    <div class="portrait-wrap"><img src="images/profile-dark.webp" alt="Ranjith Maliga Guruprakash" class="portrait" id="portrait"></div>
                     <div class="term">
                         <div class="term-dots"><span></span><span></span><span></span></div>
                         <div class="l"><span class="k">role</span>: <span class="v">"AI / ML Engineer"</span></div>
@@ -920,9 +920,11 @@
         /* ---- Theme ---- */
         const root = document.documentElement;
         const themeBtn = document.getElementById('themeBtn');
+        const portraitImg = document.getElementById('portrait');
         const setTheme = (t) => {
             root.setAttribute('data-theme', t);
             themeBtn.textContent = t === 'dark' ? '🌙' : '☀️';
+            if (portraitImg) portraitImg.src = t === 'dark' ? 'images/profile-dark.webp' : 'images/profile-light.webp';
             try { localStorage.setItem('theme', t); } catch(e){}
         };
         setTheme((() => { try { return localStorage.getItem('theme'); } catch(e){} })() || 'dark');
