@@ -139,10 +139,10 @@
             border-bottom: 1px solid var(--border);
         }
         .nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 0 26px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-        .logo { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.06rem; letter-spacing: -0.02em; }
+        .logo { display: flex; align-items: center; gap: 11px; font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-weight: 700; font-size: 1.06rem; letter-spacing: -0.02em; }
         .logo-mark {
             width: 34px; height: 34px; border-radius: 10px; background: var(--grad);
-            display: grid; place-items: center; color: #0a0a12; font-family: 'JetBrains Mono'; font-weight: 700;
+            display: grid; place-items: center; color: #0a0a12; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-weight: 700;
         }
         .nav-right { display: flex; align-items: center; gap: 8px; }
         .nav-links { display: flex; gap: 4px; align-items: center; }
@@ -162,7 +162,7 @@
         }
         .cmdk-btn:hover { color: var(--text); border-color: var(--border-2); }
         .cmdk-btn kbd {
-            font-family: 'JetBrains Mono'; font-size: 0.72rem; background: var(--surface-3);
+            font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.72rem; background: var(--surface-3);
             border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; color: var(--text-2);
         }
         .nav-toggle { display: none; }
@@ -172,7 +172,7 @@
         .hero-top { display: grid; grid-template-columns: 1.4fr 0.85fr; gap: 46px; align-items: center; }
 
         .eyebrow {
-            display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono';
+            display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
             font-size: 0.76rem; letter-spacing: 0.04em; color: var(--text-2);
             background: var(--surface); border: 1px solid var(--border);
             padding: 7px 15px; border-radius: 999px; margin-bottom: 26px;
@@ -181,7 +181,7 @@
         @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)} 70%{box-shadow:0 0 0 9px rgba(52,211,153,0)} 100%{box-shadow:0 0 0 0 rgba(52,211,153,0)} }
 
         .hero h1 {
-            font-family: 'Space Grotesk'; font-size: clamp(2.5rem, 5.6vw, 4.3rem);
+            font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: clamp(2.5rem, 5.6vw, 4.3rem);
             font-weight: 700; line-height: 1.03; letter-spacing: -0.035em; margin-bottom: 24px;
         }
         .hero .lede { font-size: 1.2rem; color: var(--text-2); max-width: 610px; margin-bottom: 18px; }
@@ -219,7 +219,7 @@
         .term {
             background: color-mix(in srgb, var(--bg-2) 78%, transparent);
             border: 1px solid var(--border); border-radius: 16px; padding: 15px 17px;
-            font-family: 'JetBrains Mono'; font-size: 0.78rem; backdrop-filter: blur(8px);
+            font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.78rem; backdrop-filter: blur(8px);
         }
         .term-dots { display: flex; gap: 6px; margin-bottom: 11px; }
         .term-dots span { width: 11px; height: 11px; border-radius: 50%; }
@@ -242,8 +242,8 @@
         .card > * { position: relative; z-index: 1; }
 
         .metric { padding: 24px 22px; }
-        .metric .val { font-family: 'Space Grotesk'; font-size: 2.3rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; margin-bottom: 9px; }
-        .metric .lbl { font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--text-2); }
+        .metric .val { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 2.3rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1; margin-bottom: 9px; }
+        .metric .lbl { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.8rem; color: var(--text-2); }
 
         /* ===== Marquee ===== */
         .marquee {
@@ -255,7 +255,7 @@
         .marquee-track { display: flex; gap: 44px; width: max-content; animation: scroll 38s linear infinite; }
         .marquee:hover .marquee-track { animation-play-state: paused; }
         .marquee-track span {
-            font-family: 'Space Grotesk'; font-size: 1.15rem; font-weight: 500; color: var(--text-3);
+            font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.15rem; font-weight: 500; color: var(--text-3);
             display: inline-flex; align-items: center; gap: 44px; white-space: nowrap;
         }
         .marquee-track span::after { content: "✦"; color: var(--violet); font-size: 0.8rem; }
@@ -264,19 +264,19 @@
         /* ===== Sections ===== */
         .section { padding: 96px 0; position: relative; }
         .section-head { margin-bottom: 54px; max-width: 760px; }
-        .kicker { display: flex; align-items: center; gap: 13px; font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--cyan); letter-spacing: 0.05em; margin-bottom: 16px; }
+        .kicker { display: flex; align-items: center; gap: 13px; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.8rem; color: var(--cyan); letter-spacing: 0.05em; margin-bottom: 16px; }
         .kicker .num { color: var(--text-3); }
         .kicker::after { content: ""; flex: 1; height: 1px; background: var(--border); max-width: 70px; }
-        .s-title { font-family: 'Space Grotesk'; font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 16px; }
+        .s-title { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 16px; }
         .s-sub { color: var(--text-2); font-size: 1.08rem; }
 
         /* About */
         .about-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 46px; align-items: start; }
         .about-body p { color: var(--text-2); margin-bottom: 18px; font-size: 1.05rem; }
         .about-body strong { color: var(--text); font-weight: 600; }
-        .about-lead { font-family: 'Space Grotesk'; font-size: 1.45rem !important; color: var(--text) !important; font-weight: 600; line-height: 1.45; letter-spacing: -0.01em; margin-bottom: 26px !important; }
+        .about-lead { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.45rem !important; color: var(--text) !important; font-weight: 600; line-height: 1.45; letter-spacing: -0.01em; margin-bottom: 26px !important; }
         .about-card { padding: 30px; }
-        .about-card h4 { font-family: 'JetBrains Mono'; font-size: 0.8rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
+        .about-card h4 { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.8rem; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
         .focus-list { list-style: none; display: flex; flex-direction: column; gap: 15px; }
         .focus-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.96rem; color: var(--text-2); }
         .focus-list li b { color: var(--text); font-weight: 600; }
@@ -286,19 +286,19 @@
         .project { padding: 0; margin-bottom: 28px; }
         .project:hover { box-shadow: var(--shadow); }
         .project-top { padding: 34px 38px 0; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
-        .flag { font-family: 'JetBrains Mono'; font-size: 0.71rem; text-transform: uppercase; letter-spacing: 0.07em; padding: 6px 12px; border-radius: 999px; background: var(--grad-soft); border: 1px solid var(--border); color: var(--cyan); white-space: nowrap; }
-        .project-name { font-family: 'Space Grotesk'; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 9px; }
+        .flag { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.71rem; text-transform: uppercase; letter-spacing: 0.07em; padding: 6px 12px; border-radius: 999px; background: var(--grad-soft); border: 1px solid var(--border); color: var(--cyan); white-space: nowrap; }
+        .project-name { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 9px; }
         .project-tagline { color: var(--text-2); font-size: 1.02rem; max-width: 660px; }
         .project-body { padding: 26px 38px 36px; }
         .pcols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 26px; }
-        .pcol h5 { font-family: 'JetBrains Mono'; font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-3); margin-bottom: 15px; }
+        .pcol h5 { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.77rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-3); margin-bottom: 15px; }
         .pcol ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
         .pcol li { position: relative; padding-left: 23px; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; }
         .pcol li::before { content: "→"; position: absolute; left: 0; color: var(--violet); font-weight: 700; }
         .pcol.res li::before { content: "✓"; color: var(--emerald); }
         .pcol li b { color: var(--text); font-weight: 600; }
         .techs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
-        .tech { font-family: 'JetBrains Mono'; font-size: 0.77rem; padding: 6px 12px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); }
+        .tech { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.77rem; padding: 6px 12px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); }
         .plinks { display: flex; gap: 12px; flex-wrap: wrap; }
         .plink { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border-radius: 11px; font-size: 0.9rem; font-weight: 600; background: var(--surface-2); border: 1px solid var(--border); color: var(--text); transition: all .2s; }
         .plink:hover { border-color: var(--border-2); transform: translateY(-2px); }
@@ -308,28 +308,28 @@
         .gridc { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
         .pcard { padding: 28px; display: flex; flex-direction: column; }
         .pcard .flag { margin-bottom: 16px; align-self: flex-start; }
-        .pcard h4 { font-family: 'Space Grotesk'; font-size: 1.24rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+        .pcard h4 { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.24rem; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
         .pcard p { color: var(--text-2); font-size: 0.94rem; margin-bottom: 18px; flex-grow: 1; }
         .pcard .techs { margin-bottom: 16px; } .pcard .plinks { margin-top: auto; }
 
-        .subhead { font-family: 'JetBrains Mono'; font-size: 0.84rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 56px 0 24px; display: flex; align-items: center; gap: 14px; }
+        .subhead { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.84rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 56px 0 24px; display: flex; align-items: center; gap: 14px; }
         .subhead::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
         /* Skills */
         .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
         .skill { padding: 32px; }
-        .skill h3 { font-family: 'Space Grotesk'; font-size: 1.18rem; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 13px; }
+        .skill h3 { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.18rem; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 13px; }
         .sic { width: 40px; height: 40px; border-radius: 11px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-size: 1.15rem; }
         .skill .desc { color: var(--text-3); font-size: 0.87rem; margin-bottom: 20px; }
         .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-        .chip { font-family: 'JetBrains Mono'; font-size: 0.78rem; padding: 6px 11px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); transition: color .2s, border-color .2s; }
+        .chip { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.78rem; padding: 6px 11px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); transition: color .2s, border-color .2s; }
         .skill:hover .chip { color: var(--text); border-color: var(--border-2); }
 
         /* AI toolchain */
         .tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
         .tool { display: flex; align-items: center; gap: 16px; padding: 24px; }
-        .tool-mark { flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-family: 'JetBrains Mono'; font-size: 1.3rem; color: var(--text); }
-        .tool-name { font-family: 'Space Grotesk'; font-weight: 600; font-size: 1.05rem; }
+        .tool-mark { flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 1.3rem; color: var(--text); }
+        .tool-name { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-weight: 600; font-size: 1.05rem; }
         .tool-desc { color: var(--text-3); font-size: 0.84rem; }
 
         /* Timeline */
@@ -337,8 +337,8 @@
         .tl { position: relative; padding: 0 0 40px 36px; border-left: 1px solid var(--border); }
         .tl:last-child { border-left-color: transparent; padding-bottom: 0; }
         .tl-dot { position: absolute; left: -8px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--text-3); border: 3px solid var(--bg); box-shadow: 0 0 0 1.5px var(--border-2); box-sizing: content-box; }
-        .tl-meta { font-family: 'JetBrains Mono'; font-size: 0.77rem; color: var(--text-3); margin-bottom: 6px; }
-        .tl-title { font-family: 'Space Grotesk'; font-size: 1.24rem; font-weight: 600; letter-spacing: -0.01em; }
+        .tl-meta { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.77rem; color: var(--text-3); margin-bottom: 6px; }
+        .tl-title { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.24rem; font-weight: 600; letter-spacing: -0.01em; }
         .tl-org { color: var(--text-2); font-size: 0.96rem; margin-bottom: 14px; } .tl-org b { color: var(--text); font-weight: 600; }
         .tl-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
         .tl-list li { position: relative; padding-left: 20px; color: var(--text-2); font-size: 0.95rem; line-height: 1.6; }
@@ -346,33 +346,33 @@
         .tl-list li b { color: var(--text); font-weight: 600; }
         .tl-dot.work { background: var(--cyan); }
         .tl-dot.edu { background: var(--violet); }
-        .tl-tag { display: inline-block; font-family: 'JetBrains Mono'; font-size: 0.65rem; letter-spacing: 0.09em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); margin-bottom: 11px; }
+        .tl-tag { display: inline-block; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.65rem; letter-spacing: 0.09em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); margin-bottom: 11px; }
         .tl-tag.work { color: var(--cyan); background: color-mix(in srgb, var(--cyan) 12%, transparent); }
         .tl-tag.edu { color: var(--violet); background: color-mix(in srgb, var(--violet) 14%, transparent); }
         .tl-intro { color: var(--text-2); font-size: 0.97rem; margin: 4px 0 6px; }
         .tl-intro b { color: var(--text); }
-        .tl-label { font-family: 'JetBrains Mono'; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 16px 0 10px; }
+        .tl-label { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); margin: 16px 0 10px; }
         .tl-soft { color: var(--text-3); font-size: 0.9rem; }
         .tl .techs { margin-bottom: 2px; }
 
         .ec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 66px; }
-        .block-title { font-family: 'Space Grotesk'; font-size: 1.3rem; font-weight: 600; margin-bottom: 22px; letter-spacing: -0.01em; }
+        .block-title { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 22px; letter-spacing: -0.01em; }
         .cert { display: flex; align-items: center; gap: 14px; padding: 15px 18px; margin-bottom: 12px; }
         .cert-badge { flex-shrink: 0; width: 36px; height: 36px; border-radius: 10px; background: var(--grad-soft); border: 1px solid var(--border); display: grid; place-items: center; font-size: 0.95rem; }
         .cert .n { font-weight: 600; font-size: 0.92rem; line-height: 1.35; } .cert .src { color: var(--text-3); font-size: 0.8rem; }
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
         .cert-grid .cert { margin-bottom: 0; height: 100%; }
-        .cert-count { font-family: 'JetBrains Mono'; font-size: 0.92rem; color: var(--text-3); font-weight: 500; }
+        .cert-count { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.92rem; color: var(--text-3); font-weight: 500; }
         .cert-badge img { display: block; }
 
         /* Contact */
         .contact-card { border: 1px solid var(--border-2); border-radius: 30px; padding: 64px 50px; text-align: center; position: relative; overflow: hidden; background: var(--grad-soft); }
         .contact-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(520px circle at 50% -20%, var(--grad-soft), transparent 70%); z-index: 0; }
         .contact-card > * { position: relative; z-index: 1; }
-        .contact-card h2 { font-family: 'Space Grotesk'; font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; }
+        .contact-card h2 { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; font-size: clamp(2rem, 4.4vw, 3.1rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 16px; }
         .contact-card p { color: var(--text-2); font-size: 1.1rem; max-width: 580px; margin: 0 auto 34px; }
         .contact-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 34px; }
-        .contact-detail { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; font-family: 'JetBrains Mono'; font-size: 0.85rem; color: var(--text-2); }
+        .contact-detail { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.85rem; color: var(--text-2); }
         .contact-detail span { display: inline-flex; align-items: center; gap: 8px; }
         .contact-detail a:hover { color: var(--cyan); }
 
@@ -392,16 +392,16 @@
             animation: pop .18s ease;
         }
         @keyframes pop { from { transform: translateY(-10px) scale(.98); opacity: 0; } }
-        .cmdk-input { width: 100%; padding: 20px 22px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--text); font-size: 1.05rem; font-family: 'Inter'; outline: none; }
+        .cmdk-input { width: 100%; padding: 20px 22px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--text); font-size: 1.05rem; font-family: 'Inter', -apple-system, sans-serif; outline: none; }
         .cmdk-input::placeholder { color: var(--text-3); }
         .cmdk-list { max-height: 320px; overflow-y: auto; padding: 8px; }
         .cmdk-item { display: flex; align-items: center; gap: 14px; padding: 13px 15px; border-radius: 11px; cursor: pointer; color: var(--text-2); }
         .cmdk-item .ci-ic { width: 30px; height: 30px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border); display: grid; place-items: center; font-size: 0.9rem; flex-shrink: 0; }
         .cmdk-item .ci-label { font-size: 0.95rem; color: var(--text); font-weight: 500; }
-        .cmdk-item .ci-hint { margin-left: auto; font-family: 'JetBrains Mono'; font-size: 0.72rem; color: var(--text-3); }
+        .cmdk-item .ci-hint { margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.72rem; color: var(--text-3); }
         .cmdk-item.active, .cmdk-item:hover { background: var(--surface-2); color: var(--text); }
         .cmdk-empty { padding: 26px; text-align: center; color: var(--text-3); font-size: 0.9rem; }
-        .cmdk-foot { padding: 10px 16px; border-top: 1px solid var(--border); display: flex; gap: 16px; font-family: 'JetBrains Mono'; font-size: 0.72rem; color: var(--text-3); }
+        .cmdk-foot { padding: 10px 16px; border-top: 1px solid var(--border); display: flex; gap: 16px; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.72rem; color: var(--text-3); }
         .cmdk-foot kbd { background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
 
         /* reveal */
@@ -434,6 +434,7 @@
             .tools-grid { grid-template-columns: 1fr; }
         }
     </style>
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
     <div id="progress"></div>
