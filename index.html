@@ -12,6 +12,13 @@
     <meta property="og:title" content="Ranjith Maliga Guruprakash | AI/ML Engineer — Agentic AI & Production GenAI">
     <meta property="og:description" content="I engineer AI agents that work when the stakes are real. LangGraph multi-agent systems, MCP, RAG, and AI automation — GenAI built to survive production, not just demos.">
     <meta property="og:url" content="https://ranjith36963.github.io">
+    <meta property="og:image" content="https://ranjith36963.github.io/images/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ranjith Maliga Guruprakash | AI/ML Engineer — Agentic AI & Production GenAI">
+    <meta name="twitter:description" content="LangGraph multi-agent systems, MCP, RAG, and AI automation — GenAI built to survive production.">
+    <meta name="twitter:image" content="https://ranjith36963.github.io/images/og.png">
 
     <title>Ranjith Maliga Guruprakash | AI/ML Engineer — Agentic AI & GenAI</title>
 
@@ -305,6 +312,25 @@
         .plink.solid { background: var(--grad); color: #0a0a12; border-color: transparent; }
         .plink.muted { color: var(--text-3); cursor: default; } .plink.muted:hover { transform: none; }
 
+        /* project screenshots */
+        .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px; }
+        .shots figure { margin: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--surface-2); }
+        .shots img { width: 100%; display: block; aspect-ratio: 16/8.6; object-fit: cover; object-position: top; transition: transform .35s; }
+        .shots figure:hover img { transform: scale(1.025); }
+        .shots figcaption { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.72rem; color: var(--text-3); padding: 9px 13px; border-top: 1px solid var(--border); }
+
+        /* collapsible timeline details */
+        .tl-more { margin-top: 4px; }
+        .tl-more > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace; font-size: 0.76rem; letter-spacing: 0.04em; color: var(--cyan); padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px; transition: border-color .2s, background .2s; user-select: none; }
+        .tl-more > summary::-webkit-details-marker { display: none; }
+        .tl-more > summary::after { content: "▾"; font-size: 0.7rem; transition: transform .25s; }
+        .tl-more[open] > summary::after { transform: rotate(180deg); }
+        .tl-more > summary:hover { border-color: var(--border-2); background: var(--surface-2); }
+        .tl-more[open] > summary { margin-bottom: 6px; }
+
+        /* keyboard focus */
+        a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+
         .gridc { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
         .pcard { padding: 28px; display: flex; flex-direction: column; }
         .pcard .flag { margin-bottom: 16px; align-self: flex-start; }
@@ -429,6 +455,7 @@
             .nav-links.open a { padding: 12px 14px; }
             .hero { padding-top: 130px; }
             .project-top, .project-body { padding-left: 24px; padding-right: 24px; }
+            .shots { grid-template-columns: 1fr; }
             .contact-card { padding: 46px 24px; }
             .section { padding: 72px 0; }
             .tools-grid { grid-template-columns: 1fr; }
@@ -591,6 +618,10 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="shots">
+                        <figure><img src="images/shot-hitl-slack.webp" alt="Slack approval card with risk flags and Approve / Edit / Reject buttons" loading="lazy"><figcaption>Live Slack approval — risk_flags fired, human decides</figcaption></figure>
+                        <figure><img src="images/shot-hitl-grafana.webp" alt="Grafana dashboard showing ticket latency and LLM token throughput" loading="lazy"><figcaption>Grafana — p50 ~3s ticket latency, per-call LLM metrics</figcaption></figure>
+                    </div>
                     <div class="techs"><span class="tech">LangGraph</span><span class="tech">MCP</span><span class="tech">FastAPI</span><span class="tech">OpenAI / DeepSeek</span><span class="tech">Gmail API</span><span class="tech">Slack Bolt</span><span class="tech">LangSmith</span><span class="tech">Prometheus</span><span class="tech">Grafana</span><span class="tech">Docker</span></div>
                     <div class="plinks"><a href="https://github.com/Ranjith36963/hitl-support-agent" target="_blank" rel="noopener" class="plink solid">View on GitHub →</a></div>
                 </div>
@@ -625,6 +656,10 @@
                                 <li><b>Modern stack</b> — Next.js 16 + React 19 frontend, FastAPI engine</li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="shots">
+                        <figure><img src="images/shot-dp-autopilot.webp" alt="DataPilot Auto-Pilot running a 5-step AI analysis plan on a dataset" loading="lazy"><figcaption>Auto-Pilot — LLM plans &amp; executes the full analysis</figcaption></figure>
+                        <figure><img src="images/shot-dp-visualize.webp" alt="DataPilot chart builder with AI-suggested visualizations" loading="lazy"><figcaption>Chart builder — 13 chart types, AI-suggested</figcaption></figure>
                     </div>
                     <div class="techs"><span class="tech">Python</span><span class="tech">FastAPI</span><span class="tech">Next.js 16</span><span class="tech">React 19</span><span class="tech">scikit-learn</span><span class="tech">XGBoost / LightGBM</span><span class="tech">SHAP</span><span class="tech">sentence-transformers</span><span class="tech">Groq</span><span class="tech">Gemini</span></div>
                     <div class="plinks"><a href="https://github.com/Ranjith36963/datapilot" target="_blank" rel="noopener" class="plink solid">View on GitHub →</a></div>
@@ -836,6 +871,8 @@
                     <div class="tl-title">AI Solutions Engineer – R&amp;D Department</div>
                     <div class="tl-org"><b>Calnex Solutions</b> · Contract</div>
                     <p class="tl-intro">Architected production-ready multimodal Generative AI assistant achieving <b>95% response accuracy</b> with <b>75% faster</b> response times.</p>
+                    <details class="tl-more" open>
+                    <summary>Full details</summary>
                     <div class="tl-label">Key achievements</div>
                     <ul class="tl-list">
                         <li>Built containerized multimodal AI system processing <b>text, image, speech, and audio</b> inputs using Docker on Linux VM, enabling portable production deployment across environments</li>
@@ -846,6 +883,7 @@
                     </ul>
                     <div class="tl-label">Technologies</div>
                     <div class="techs"><span class="tech">Docker</span><span class="tech">AWS Bedrock</span><span class="tech">AWS S3</span><span class="tech">Chroma DB</span><span class="tech">Redis</span><span class="tech">Linux</span><span class="tech">Python</span><span class="tech">RAG Pipelines</span><span class="tech">Generative AI</span><span class="tech">Multi-Agent Systems</span><span class="tech">Vector Databases</span></div>
+                    </details>
                 </div>
 
                 <div class="tl reveal">
@@ -855,6 +893,8 @@
                     <div class="tl-title">AI / ML Intern</div>
                     <div class="tl-org"><b>Nethermind</b> · Internship</div>
                     <p class="tl-intro">Developed scalable LLM systems and multimodal AI solutions for a blockchain technology company, focusing on video understanding and natural language processing applications.</p>
+                    <details class="tl-more">
+                    <summary>Full details</summary>
                     <div class="tl-label">Key achievements</div>
                     <ul class="tl-list">
                         <li>Designed and built scalable LLM systems using <b>TensorFlow and PyTorch</b>, enhancing performance through advanced NLP techniques and hyperparameter optimization</li>
@@ -865,6 +905,7 @@
                     </ul>
                     <div class="tl-label">Technologies</div>
                     <div class="techs"><span class="tech">Python</span><span class="tech">TensorFlow</span><span class="tech">PyTorch</span><span class="tech">LangChain</span><span class="tech">OpenAI API</span><span class="tech">Gemini API</span><span class="tech">Large Language Models</span><span class="tech">NLP</span><span class="tech">Video Understanding</span><span class="tech">Data Preprocessing</span></div>
+                    </details>
                 </div>
 
                 <div class="tl reveal">
@@ -874,6 +915,8 @@
                     <div class="tl-title">Master's degree, Artificial Intelligence and Robotics</div>
                     <div class="tl-org"><b>University of Hertfordshire</b></div>
                     <p class="tl-intro">Advanced study across deep learning, computer vision, and reinforcement learning — culminating in a machine-learning dissertation on online payment fraud detection.</p>
+                    <details class="tl-more">
+                    <summary>Full details</summary>
                     <div class="tl-label">Relevant coursework</div>
                     <div class="techs"><span class="tech">Neural Networks</span><span class="tech">Machine Learning</span><span class="tech">Deep Learning</span><span class="tech">Computer Vision</span><span class="tech">Reinforcement Learning</span><span class="tech">AI Theory and Practice</span><span class="tech">Artificial Life with Robotics</span></div>
                     <div class="tl-label">Master's dissertation — Machine Learning Techniques for Online Payment System Fraud Detection</div>
@@ -885,6 +928,7 @@
                     </ul>
                     <div class="tl-label">Activities &amp; societies</div>
                     <p class="tl-soft">AI society · Robotics society · Coding · Volleyball &amp; Badminton</p>
+                    </details>
                 </div>
 
                 <div class="tl reveal">
@@ -894,6 +938,8 @@
                     <div class="tl-title">Bachelor of Engineering – BE, Computer Science</div>
                     <div class="tl-org"><b>Visvesvaraya Technological University</b></div>
                     <p class="tl-intro">Computer science foundations across data structures, operating systems, networks, and databases — with applied machine-learning projects in traffic prediction and predictive maintenance.</p>
+                    <details class="tl-more">
+                    <summary>Full details</summary>
                     <div class="tl-label">Relevant coursework</div>
                     <div class="techs"><span class="tech">Data Structures &amp; Algorithms</span><span class="tech">Operating Systems</span><span class="tech">Computer Networks</span><span class="tech">Database Management</span><span class="tech">AI &amp; Machine Learning</span><span class="tech">Programming Fundamentals</span></div>
                     <div class="tl-label">Academic project — Traffic Management System using Machine Learning and IoT</div>
@@ -906,6 +952,7 @@
                     </ul>
                     <div class="tl-label">Activities &amp; societies</div>
                     <p class="tl-soft">Marching band · Volleyball · Athletics · Badminton</p>
+                    </details>
                 </div>
 
                 <div class="tl reveal">
@@ -915,10 +962,13 @@
                     <div class="tl-title">Pre-University — Physics, Chemistry, Mathematics &amp; Computer Science</div>
                     <div class="tl-org"><b>Vijaya College, Bengaluru</b></div>
                     <p class="tl-intro">Focused on building a strong foundation in STEM subjects with emphasis on mathematics, physics, and early programming concepts.</p>
+                    <details class="tl-more">
+                    <summary>Full details</summary>
                     <div class="tl-label">Relevant coursework</div>
                     <div class="techs"><span class="tech">Physics</span><span class="tech">Chemistry</span><span class="tech">Mathematics</span><span class="tech">Computer Science</span></div>
                     <div class="tl-label">Activities &amp; societies</div>
                     <p class="tl-soft">Volleyball · Cricket · Programming</p>
+                    </details>
                 </div>
             </div>
 
