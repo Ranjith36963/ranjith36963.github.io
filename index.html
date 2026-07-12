@@ -25,7 +25,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -360,6 +360,20 @@
         /* kicker data-marker */
         .kicker::before { content: "///"; color: var(--violet); opacity: .7; letter-spacing: -1px; }
 
+        /* kinetic type (Realm-style weight morph) */
+        @keyframes kinetic-morph {
+            0%, 100% { font-variation-settings: "wght" 430; letter-spacing: -0.045em; }
+            50% { font-variation-settings: "wght" 720; letter-spacing: 0.002em; }
+        }
+        .kinetic { display: inline-block; animation: kinetic-morph 4.6s ease-in-out infinite; }
+        .logo-word i { font-style: normal; display: inline-block; animation: logo-wave 3.8s ease-in-out infinite; animation-delay: calc(var(--i) * 0.13s); }
+        @keyframes logo-wave {
+            0%, 34%, 100% { font-variation-settings: "wght" 700; }
+            14% { font-variation-settings: "wght" 360; }
+        }
+        .s-title { transition: letter-spacing .5s ease; }
+        .section-head:hover .s-title { letter-spacing: -0.015em; }
+
         /* terminal cursor */
         .cursor-blink { display: inline-block; width: 8px; height: 13px; background: var(--emerald); vertical-align: -2px; margin-left: 3px; animation: blink 1.05s steps(1) infinite; }
         @keyframes blink { 50% { opacity: 0; } }
@@ -376,6 +390,7 @@
         @media (prefers-reduced-motion: reduce) {
             .flagship-card::before { animation: none; }
             .cursor-blink { animation: none; }
+            .kinetic, .logo-word i { animation: none; }
         }
 
         /* collapsible timeline details */
@@ -548,7 +563,7 @@
     <!-- Nav -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#top" class="logo"><span class="logo-mark"><svg width="23" height="23" style="color:#0a0a12" role="img" aria-label="R"><use href="#i-rmark"/></svg></span><span>Ranjith<span style="color:var(--text-3)">.ai</span></span></a>
+            <a href="#top" class="logo"><span class="logo-mark"><svg width="23" height="23" style="color:#0a0a12" role="img" aria-label="R"><use href="#i-rmark"/></svg></span><span class="logo-word"><i style="--i:0">R</i><i style="--i:1">a</i><i style="--i:2">n</i><i style="--i:3">j</i><i style="--i:4">i</i><i style="--i:5">t</i><i style="--i:6">h</i><span style="color:var(--text-3)">.ai</span></span></a>
             <div class="nav-right">
                 <div class="nav-links" id="navLinks">
                     <a href="#about">About</a>
@@ -571,7 +586,7 @@
             <div class="hero-top">
                 <div class="reveal">
                     <span class="eyebrow"><span class="dot"></span> AI / ML ENGINEER · UNITED KINGDOM · OPEN TO WORK</span>
-                    <h1>I engineer <span class="gtext">AI agents</span> that work when the stakes are real.</h1>
+                    <h1>I engineer <span class="gtext kinetic">AI agents</span> that work when the stakes are real.</h1>
                     <p class="lede">AI/ML Engineer specializing in <strong>LangGraph multi-agent systems</strong>, production RAG, and AI automation.</p>
                     <p class="sub">From a <strong>0%-unsafe-auto-send</strong> human-in-the-loop support agent to a <strong>90%</strong> fraud detector on 6.3M transactions — I build GenAI that survives production, not just demos that look good on a slide.</p>
                     <div class="cta-row">
